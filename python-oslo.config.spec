@@ -1,6 +1,6 @@
 Name:		python-oslo.config
 Version:	9.7.0
-Release:	1
+Release:	2
 Source0:	https://files.pythonhosted.org/packages/source/o/oslo.config/oslo.config-%{version}.tar.gz
 Summary:	Oslo Configuration API
 URL:		https://pypi.org/project/oslo.config/
