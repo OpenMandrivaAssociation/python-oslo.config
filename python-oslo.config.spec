@@ -1,21 +1,26 @@
+%define module oslo_config
+%define oname oslo-config
+
 Name:		python-oslo.config
-Version:	10.2.0
+Version:	10.3.0
 Release:	1
-Source0:	https://files.pythonhosted.org/packages/source/o/oslo_config/oslo_config-%{version}.tar.gz
 Summary:	Oslo Configuration API
-URL:		https://pypi.org/project/oslo.config/
 License:	None
 Group:		Development/Python
-BuildRequires:	python
-BuildRequires:	python%{pyver}dist(pbr)
+URL:		https://pypi.org/project/oslo.config/
+Source0:	https://files.pythonhosted.org/packages/source/o/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+
 BuildSystem:	python
 BuildArch:	noarch
+BuildRequires:	python%{pyver}dist(pbr)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
 
 %description
 Oslo Configuration API
 
 %files
-%{_bindir}/oslo-config-generator
-%{_bindir}/oslo-config-validator
-%{py_sitedir}/oslo_config
-%{py_sitedir}/oslo_config-*.*-info
+%{_bindir}/%{oname}-{generator,validator}
+%{py_sitedir}/%{module}
+%{py_sitedir}/%{module}-%{version}.dist-info
