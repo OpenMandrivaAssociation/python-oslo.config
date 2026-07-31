@@ -2,7 +2,7 @@
 %define oname oslo-config
 
 Name:		python-oslo.config
-Version:	10.4.0
+Version:	10.6.0
 Release:	1
 Summary:	Oslo Configuration API
 License:	None
