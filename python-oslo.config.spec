@@ -2,10 +2,10 @@
 %define oname oslo-config
 
 Name:		python-oslo.config
-Version:	10.6.0
+Version:	10.7.0
 Release:	1
 Summary:	Oslo Configuration API
-License:	None
+License:	Apache-2.0
 Group:		Development/Python
 URL:		https://pypi.org/project/oslo.config/
 Source0:	https://files.pythonhosted.org/packages/source/o/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
@@ -16,6 +16,9 @@ BuildRequires:	python%{pyver}dist(pbr)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(wheel)
+
+%build -p
+export PBR_VERSION="%{version}"
 
 %description
 Oslo Configuration API
